@@ -1,0 +1,157 @@
+JavaScript DataTypes:
+1)Types of Data types   
+ ------------JavaScript has 7 primitive Datatypes------------------
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+----------------Non-primitive/Composite data type--------------------------
+    1)An object 
+    2)An array
+    3)date 
+    4)function
+
+2)JavaScript Types are Dynamic
+ 
+
+1)Types of DataTypes
+=> There two categories of data types:
+Primitive data types: The predefined data types provided by JavaScript language are known as primitive data types. 
+Primitive data types are also known as in-built data types.
+e.g-string, number, boolean, undefined, null, bigint and symbol 
+
+Non-primitive data types: The data types that are derived from primitive data types of the JavaScript language are known as non-primitive data types.
+It is also known as derived data types or reference data types. 
+
+Their are 7 primitive datatype:
+a. String
+b. Number
+c. Bigint
+d. Boolean
+e. Undefined
+f. Null
+g. Symbol
+
+a) String-String is a sequence of characters enclosed in single or double quotes or within backticks.
+eg#1
+let str="hello world";
+let str1='hello world';
+let str2=`hello world`;
+
+b)Number -Number is a numeric datatype in javascript. It can be integer, float, double, long, short, etc.
+eg#1
+ let num=5; //integer
+ let num1=5.5; //floating value 
+ let num2=5.5e5; //exponential notation //meaning 5.5*10^5=550000
+ let num3=5.5e-5; //5.5*10^-5=0.000055 
+
+eg#2
+The Number data type also includes some special values which are: Infinity, -Infinity and NaN. Infinity represents the mathematical Infinity ∞, which is greater than any number. Infinity is the result of dividing a nonzero number by 0, as demonstrated below:
+let a = 25;         // integer
+let  b = 80.5;       // floating-point number
+let c = 4.25e+6;    // exponential notation, same as 4.25e6 or 4250000
+let d = 4.25e-6;    // exponential notation, same as 0.00000425
+let a = 25;         // integer
+let b = 80.5;       // floating-point number
+let  c = 4.25e+6;    // exponential notation, same as 4.25e6 or 4250000
+let d = 4.25e-6;    // exponential notation, same as 0.00000425
+console.log("Some text" / 2);       // Output: NaN
+console.log("Some text" / 2 + 10);  // Output: NaN
+console.log(Math.sqrt(-1));         // Output: NaN
+//what is maximum value in js
+console.log(Number.MAX_VALUE); //1.7976931348623157e+308
+//what is minimum value in js
+console.log(Number.MIN_VALUE); //5e-324
+//what is positive infinity in js
+console.log(Number.POSITIVE_INFINITY); //Infinity
+//what is negative infinity in js
+console.log(Number.NEGATIVE_INFINITY);  //-Infinity
+//what is not a number in js
+console.log(Number.NaN); //NaN
+// when we are multiplaying max number with 10 whiy is it not converted to bigint itself
+console.log(Number.MAX_VALUE * 10);  //Infinity
+//divide max value with 10
+console.log(Number.MAX_VALUE / 10); //1.7976931348623158e+307
+ 
+ 
+
+Note
+Most programming languages have many number types:
+
+Whole numbers (integers):
+byte (8-bit), short (16-bit), int (32-bit), long (64-bit)
+
+Real numbers (floating-piont):
+float (32-bit), double (64-bit).
+
+Javascript are always one type:
+double (64-bit floating point). 
+2**53-1 
+
+
+c)Bigint - BigInt is a numeric datatype in javascript. 
+It can be integer, float, double, long, short, etc. It can be used to represent any integer value. 
+
+why we use bigint if we have number datatype ?
+number datatype can represent only upto 2^53-1 value and after that it will give us wrong output.
+
+let num=123456789012345678901234567890;
+console.log(num);
+console.log(typeof num);
+ 
+let num1=BigInt(123456789012345678901234567890);
+console.log(num1);
+console.log(typeof num1);
+
+Output:
+1.2345678901234568e+29
+ number
+123456789012345677877719597056n
+bigint
+
+if you are using number datatype it losses his presision and accuracy
+if you are using bigint datatype it will not lose his presision and accuracy
+
+d)Boolean- Boolean is a datatype in javascript. It can be true or false.
+examples
+let bool=true;
+let bool1=false;
+
+e) Undefined - Undefined is a datatype in javascript. It can be undefined. It is used to represent the absence of value.
+eg#1
+let undef=undefined;
+let firstName;
+let x;
+ 
+f) null- The null value represents the intentional absence of any object value.
+It is one of JavaScript's primitive values and is treated as falsy for boolean operations.
+let null1=null;
+console.log(typeof null1);
+used to represent null object 
+ 
+
+g)symbol - in  ES6 introduced a new primitive data type called Symbol. 
+ Symbol is a datatype in javascript. It can be symbol. It is used to represent the unique value. 
+
+let sym=Symbol('shiva');
+let sym2=Symbol('shiva');
+console.log(sym===sym2);
+console.log(sym);
+console.log(typeof sym);
+ 
+
+console.log(null===null);
+console.log(undefined===undefined);
+console.log(true===true);
+console.log(false===false);
+console.log(5===5);
+console.log(5.5===5.5);
+console.log(5.5e5===5.5e5);
+
+
+
+Object, Array, and Function (which are all types of objects) are composite data types.
+we shall discuss separately in separates lecture of array, functions and objects.

@@ -1,0 +1,163 @@
+Introduction to ES6 or ECMAScript 2015 is 6th version of the ECMAScript programming language:
+-- Many new feature introduced in ES6 version of JavaScript
+a) let keyword, b) const keyword  c) for...of loop d) Template Literals e)default values for function parameter e) Arrow function f) Classes 
+g)Modules  h)Rest parameter  i)Spread Parameter  j)array destructuring assignment k) object destructuring assignment 
+
+-- One by one we will learn :
+
+----------------------------------------------------:Today we are learning array destructuring assignment:----------------------------------------------------------
+  Array destructuring:
+1)Why do we need array destructuring?
+2)What is syntax of array destructuring? 
+3)destructure the array 
+  a) destructure the array value in different variable 
+  b) escape some value of array and select specific
+  c) use of rest operator in array destructuring
+4)deal with undefined value in destructured array and adding default value
+5)nested destructuring array 
+6)swap two variable value using array destructuring 
+7)destructuring arrays in function parameter
+8)return multiple value from function 
+
+#1
+Why do we need array destructuring ?
+-- suppose we have an array want to extract some value and want to assign to new variable
+let arr=["shiva","muskan","arsh","harsh"];
+
+-- suppose we want to assign shiva to a variable myName and muskan to myFriend.
+              ---traditional way---
+const myName=arr[0];
+const myFriend=arr[1];
+console.log(myName);
+console.log(myFriend);
+
+            ---using array destructuring----
+const [myName,myFriend]=arr ;
+console.log(myName);
+console.log(myFriend);
+
+Now you can see it is new way to assign value to a collection of variable 
+
+
+#2
+Syntax for array destructuring :
+
+const [variable1,variable2,variable3]=arrayName ; //for three variable  //for n variable n variable we declare inside the square braces
+e.g 
+const arr=[1000,2000,3000];
+const [myDebt, myIncome, myExpectation] =arr ;
+
+#3
+a) destructuring array :
+   above we see different example that is way of destructuring array:
+
+  const arr=[1000,2000,3000];
+  const [myDebt, myIncome, myExpectation] =arr ;
+
+  const nameList=["shiva","muskan","harsh","arjun"];
+  const [myName,myFriend1,mySeconName,myFreind2]=nameList ;
+
+b)use to escape some value of array and select specific
+  const nameList=["shiva","muskan","harsh","arjun"];
+  =>Suppose i want name of friend who is girl and my second name
+  const [,myGF,mySN]=nameList;
+  console.log(myGF,mySN);
+
+c)use of rest operator in array destructuring:
+  const nameList=["shiva","muskan","harsh","arjun","abhimanyu","avi"];
+=>suppose we have lot of value in an array we want specific value with other are store get store in new array
+const [myName,myGF,...other]=nameList;
+console.log(myName,myGF, other);
+
+Note: ...other inside braces are left side is rest operator use to collect all remaining value.
+
+#4
+deal with undefined value in destructured array and adding default value
+const nameList=["shiva","muskan" ];
+suppose we have only two variable inside the array but for destructuring the array we assign three variable
+const [name1,name2,name3]=nameList; 
+console.log(name1);//shiva
+console.log(name2);//muskan
+console.log(name3); //undefined
+
+To solve undefined problem we will use default value:
+const [name1="raj",name2="raj",name3="raj"]=nameList; 
+console.log(name1);//shiva
+console.log(name2);//muskan
+console.log(name3); //raj 
+
+Note:if donot get any value from array then in that case default value is assign to that variable
+
+#5
+Nested array destructuring
+
+const collegeListStudentName=["muskan", ["shiva","harsh"],["avi","abhishek"]]; //this one is nested array 
+=> nested array destructuring:
+const [myFriendGla,[myNameGla,mySecondName],[myFrABES,myFrGalgotia]] =collegeListStudentName;
+
+console.log(myFriendGla,myNameGla,mySecondName,myFrABES,myFrGalgotia); //muskan shiva harsh avi abhishek
+
+#6
+for swap two variable value using ordinary way:
+let num1=0;
+let num2=1;
+
+console.log(num1,num2);
+//swap value of variable
+let temp;
+temp =num1;
+num1=num2;
+num2=num1;
+
+console.log(num1,num2);
+
+Now using array destructurin we can swap in one step:
+let num1=0;
+let num2=1;
+console.log(num1,num2); //0 1
+
+//swap
+[num2,num1]=[num1,num2];
+console.log(num1,num2);  //1 0
+
+#7
+destructuring array in function parameter:
+e.g
+function add([num1,num2,num3])
+{
+console.log(num1+num2+num3);
+}
+
+add([2,3,4]);
+
+function favouriteDress([dress1,dress2,dress3,...other])
+{
+console.log(dress1,dress2,dress3,other);
+}
+
+favouriteDress(["shirt","jeans","suit"]); //shirt jeans suit []
+
+#8
+return the multiple  value from function
+
+function favouriteDress( )
+{
+ return ["sarre","suit","jeans","shirt"];
+}
+const [fav1,fav2,...other]=favouritrDress();
+console.log(fav1,fav2,other);
+
+Note: remember no method overloading in JavaScript 
+
+
+
+
+
+
+
+
+
+
+
+
+

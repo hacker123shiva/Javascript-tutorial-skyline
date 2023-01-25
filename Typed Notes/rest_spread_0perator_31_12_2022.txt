@@ -1,0 +1,92 @@
+topic rest operator:
+1)what is rest operator?
+2) Syntax of rest operator ...args
+3)different examples of rest operator
+4) is variable formed using rest operator  refered to array object.
+4) iterate elements of array using for loop 
+
+1)what is rest operator?
+=>rest operator is used to collect the remaining arguments into an array 
+
+2) Suntax of rest operator
+function print(...args){
+    console.log(args);
+}
+print(1,2,3,4,5,6,7,8,9,10);
+
+3)differnt examples of rest operator 
+eg#1
+function print(...args){
+    console.log(args);
+}
+print(1,2,3,4,5,6,7,8,9,10);
+
+eg#2
+let [a,b,...rest]=[1,2,3,4,5,6,7,8,9,10]; //decomposotion of array using rest operator
+console.log(a);
+console.log(b);
+console.log(rest);
+
+4)rest operator give us the remaining arguements into an array
+=> yes , rest element is into array
+
+5) iterate elements of array using for loop 
+function add(...args){
+    let sum=0;
+    for(let i=0;i<args.length;i++){
+        sum=sum+args[i];
+    }
+    console.log(sum);
+}
+
+add(1,2,3,4,5,6,7,8,9,10);
+
+
+topic spread operator:
+1)what is use of spread operator?
+2) Syntax of spread operator ...args
+3)different examples of spread operator
+4)use of spread operator with rest operator
+
+1)what is use of spread operator?
+=> spread operator is used to split the array elements into single elements
+
+2)syntax of spread operator
+let arr=[1,2,3,4,5,6,7,8,9,10];
+console.log(arr)
+console.log(...arr);
+
+3)different example of spread operator 
+eg#1
+let arr=[1,2,3,4,5,6,7,8,9,10];
+console.log(arr)
+console.log(...arr);
+
+eg#2
+let arr1=[1,2,3,4,5,6,7,8,9,10];
+let arr2=[11,12,13,14,15,16,17,18,19,20];
+let arr3=[...arr1,...arr2];
+console.log(arr3);
+
+eg#3
+function add(a,b,c){
+    console.log(a+b+c);
+}
+
+let arr4=[1,2,3];
+add(...arr4);
+
+4)use of spread operator with rest operator
+function add1(firstName,lastname,age,...rest)
+{
+    let sum=0;
+    for(let i=0;i<rest.length;i++){
+        sum=sum+rest[i];
+    }
+    console.log(`My name is ${firstName} ${lastname} and my age is ${age} and my sum is ${sum}`);
+
+}
+arr=["shiva","srivastava",21,1,2,3,4,5,6,7,8,9,10]
+add1(...arr);
+
+

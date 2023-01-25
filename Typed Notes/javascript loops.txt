@@ -1,0 +1,94 @@
+what we have been study in javascript loop:
+1) why do we need loop?
+2)Javascript support which type of loop
+  JavaScript supports different kinds of loops:
+
+ a) for - loops through a block of code a number of times
+ b)while - loops through a block of code while a specified condition is true
+ c)do/while - also loops through a block of code while a specified condition is true
+ d) for/in - loops through the properties of an object
+ e) for/of - loops through the values of an iterable object 
+
+One by one we are talking every-loop:
+
+
+
+#2
+a)for loops
+
+// 50 times hello world  print
+console.log("Hello World" );
+console.log("Hello World" );
+console.log("Hello World" );
+console.log("Hello World" );
+
+//problem --time consuming forget count 
+
+let arr=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+console.log(arr[4]);
+
+//problem traverse array and print all element
+
+let str="Hello World";
+console.log(str[0]);
+console.log(str[1]);
+console.log(str[2]);
+console.log(str[3]);
+console.log(str[4]); 
+
+// DRY principle => don't repeat yourself 
+
+// context --> loop 
+// for , while , do while , for in , for of 
+
+//for loop
+for(let i=1;i<=50;i++){ //i++ =>i=51 
+console.log("Hello World") ; 
+}  
+
+
+// for ----> keyword
+// let i=1 --> initialization  // starting point //inciate
+// i<=50 --> condition // ending point  ---  //friend condition
+// i++ --> increment / decrement // last point50    //time complete match
+// 0,1,2,...n-1 
+for(let i=0;i<arr.length;i++){  
+console.log(arr[i]);
+}
+
+for(let i=0;i<str.length;i++){
+console.log(str[i]);
+}
+
+b) while loop
+
+// while(condition){
+
+// }
+
+//number of iteration  is not known in advance then use while loop
+ 
+let i = 0; //initialization of variable
+while(i<10){ //condition to check
+    console.log(i);
+    i++; //increment or decrement 
+}
+
+let str="Hello World";
+let i1=0;
+while(i1<str.length){
+    console.log(str[i1]);
+    i1++; 
+}
+// for(let i=0;i<=60;i++)
+
+
+
+ 
+
+
+

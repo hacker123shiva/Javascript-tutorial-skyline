@@ -1,0 +1,36 @@
+javascriipt conditional statements:
+=> if,if-else,if-else-if,switch case, ternary operator
+
+topic if-else :
+
+# if statement
+# else statement
+# if else statement
+# if else if and else
+# nested if else statement
+
+topic switch statement:
+# component of switch statement
+# switch expression general synatx
+# switch with differnt cases 
+# use of break in switch
+# switch with break statemenet vs switch with without break
+# use of default keyword
+# switch case with default vs switch case without default
+# can we use default case at top or any point other than bottom
+# can we use multiple default 
+# can we use multiple  break 
+# can we use other statement in cases  after break
+# swithc case with multiple case 
+# in javascript can we use any data type in switch case  
+# can we use continue statement in switch case
+
+topic ternary conditional operator:
+# syntax  
+  condition ? exprIfTrue : exprIfFalse
+#nested ternary operator
+ condition ? exprIfTrue : condition ? exprIfTrue : exprIfFalse
+
+
+
+
